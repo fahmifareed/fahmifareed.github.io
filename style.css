@@ -1,0 +1,257 @@
+/* General Reset */
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    background-color: #2C3333;
+    font-family: 'Roboto', sans-serif;
+    color: white;
+}
+
+/* Navigation Bar */
+.nav {
+    height: 10vh;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    font-weight: 300;
+}
+
+.pages {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.pages a {
+    font-size: 1.2rem;
+    text-decoration: none;
+    margin: 10px;
+    color: white;
+    transition: opacity 0.4s;
+}
+
+.pages a:hover {
+    cursor: pointer;
+    opacity: 0.5;
+}
+
+.nav p {
+    font-size: 1.5rem;
+    text-decoration: none;
+    margin: 10px;
+    color: white;
+    font-weight: bold;
+}
+
+/* Main Content */
+.heading {
+    height: 82vh;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Left Section */
+.left {
+    width: 35%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.socialmedia {
+    display: flex;
+    gap: 15px;
+    margin: 15px 0px;
+}
+
+.socialmedia a i {
+    padding: 15px;
+    margin: 0px 5px;
+    border-radius: 10px; /* Rounded square */
+    color: white;
+    border: 2px solid white;
+    font-size: 30px;
+    transition: all 0.5s ease;
+}
+
+.socialmedia a i:hover {
+    background-color: rgb(16, 174, 202);
+    color: #2C3333;
+    transform: scale(1.1); /* Hover effect with slight zoom */
+}
+
+/* Title Styling with Highlight Effect */
+.left h2 {
+    color: white;
+    font-weight: 300;
+    margin: 10px 0px 10px 10px;
+    font-family: 'Playfair Display', serif;
+    font-size: 1.8rem;
+}
+
+.title {
+    display: inline;
+}
+
+.highlight {
+    display: inline-block;
+    position: relative;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    padding: 5px 10px;
+    color: #fff;
+    background: linear-gradient(90deg, #80ecff, #0087a8);
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: background 0.5s ease;
+}
+
+.highlight:hover {
+    background: linear-gradient(90deg, #80ecff, #0087a8);
+}
+
+/* Subtitle */
+.left p {
+    color: white;
+    margin: 10px 0px;
+    width: 500px;
+    font-weight: 300;
+}
+
+/* Connect Button */
+.connect {
+    font-family: 'Roboto', sans-serif;
+    width: 180px;
+    height: 50px;
+    border: 1.5px solid #0087a8;
+    background-color: transparent;
+    color: white;
+    font-weight: 300;
+    border-radius: 20px;
+    margin: 10px 0px;
+    font-size: 1.2rem;
+    transition: all 0.5s ease;
+}
+
+.connect:hover {
+    background-color: #0087a8;
+    color: #2C3333;
+    border: 2px solid transparent;
+    cursor: pointer;
+}
+
+/* Right Section (Image) */
+.right {
+    width: 35%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.right img {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 2px solid white;
+}
+
+/* Footer */
+.footer {
+    height: 8vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-color: #2C3333;
+    color: white;
+}
+
+.social-handle {
+    gap: 2em;
+    height: 8vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: row;
+}
+
+.social-handle a i {
+    font-size: 1.3em;
+    color: white;
+    text-decoration: none;
+    transition: all 0.4s ease;
+}
+
+.social-handle a i:hover {
+    background-color: white;
+    color: #2C3333;
+    border-radius: 10px; /* Rounded on hover for added effect */
+    padding: 5px;
+    transform: scale(1.1); /* Hover effect with slight zoom */
+}
+
+/* Responsive Adjustments */
+@media (max-width:800px) {
+    .heading {
+        flex-direction: column;
+        flex-wrap: nowrap;
+        height: fit-content;
+    }
+
+    .left {
+        width: 100%;
+        padding: 5em;
+        text-align: center;
+    }
+
+    .left h2 {
+        padding: 1em 0;
+    }
+
+    .left p {
+        width: auto;
+    }
+
+    .socialmedia {
+        display: flex;
+        gap: 1em;
+        justify-content: space-evenly;
+        margin-top: 0;
+        margin-bottom: 3em;
+    }
+
+    .nav {
+        flex-direction: column;
+        margin: 1.5em 0;
+    }
+
+    .nav p {
+        font-size: 1.5em;
+        font-weight: bolder;
+    }
+
+    .social-handle {
+        gap: 2em;
+    }
+
+    .right img {
+        width: 150px;
+        height: 150px;
+    }
+}
